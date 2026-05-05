@@ -1,10 +1,13 @@
 echo 'Bajamos repositorio actualizado'
-  git pull origin main[cite: 1]
+#Copiamos código actualizado de Github
+git pull origin main
 
-  echo 'Detenemos Cotenedores de la Aplicacion'
-  docker-compose down[cite: 1]
+echo 'Detenemos Cotenedores de la Aplicacion'
+#Detenemos contenedores
+docker-compose down
 
-  echo 'Inicializamos contenedores y reconstruimos imagen actualizada'
-  docker-compose -f docker-compose.production.yml up -d --build[cite: 1]
+echo 'Inicializamos contenedores y reconstruimos imagen actualizada'
+#Inicializamos contenedores y reconstruimos
+docker-compose -f docker-compose.production.yml up -d --build
 
-  echo 'Actualizacion finalizada'[cite: 1]
+echo 'Actualizacion finalizada'
